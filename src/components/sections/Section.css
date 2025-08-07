@@ -1,0 +1,129 @@
+
+article.content section{
+    padding: 15px;
+    min-height: 600px;
+}
+
+article.content ul{
+    max-width: 920px;
+    margin: 0 auto;
+    list-style: none;
+}
+article.content li{
+    margin: 15px 0;
+}
+.content 
+{
+    padding: 15px;
+}
+
+.p_thumbnail{
+    width: 300px;
+    height: 200px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.p_thumbnail img{width: 100%;  border-radius: 10px;}
+
+.p_years{
+    width: 300px;
+    height: 200px;
+    padding: 15px;
+}
+
+.p_content{
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 200ms ease;
+}
+.p_content:hover{
+    background-color: #263850;
+}
+.p_discribe{
+    padding: 10px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+}
+.p_discribe p{padding: 10px;}
+.p_discribe h2{
+    margin-bottom: 10px;
+    color: #fff;
+    padding-left: 10px ;
+}
+.p_discribe .technologies{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: start;
+    width: 100%;
+    padding: 15px 0;
+    flex-wrap: wrap;
+}
+.p_discribe .technologies li{
+    margin-left: 10px;
+    padding: 6px 3px;
+    cursor: pointer;
+    background-color:#2ba640;
+    border-radius: 5px;
+    color: #def1ff;
+    font-size: 12pt;
+    font-weight: 900;
+    transition: all ease 200ms;
+}
+.p_discribe .technologies li:hover{
+    background-color: #00aaa7;
+    color: #fff;
+}
+.p_complet{
+    text-align: start;
+    font-size: 14pt;
+    max-width: 920px;
+    margin: 75px auto;
+}
+
+.p_complet span{
+    cursor: pointer;
+    color: #fff ;
+}
+
+
+@media screen and (max-width:1023px) {
+    section.main{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    article.content section{
+        padding-left: 415px;
+    }
+}
+
+@media screen and (max-width:1023px) {
+    article.content section{
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width:425px) {
+    section.main{
+       padding: 10px;
+    }
+    .p_content{
+        flex-wrap: wrap;
+    }
+    .p_content .p_years{
+        height: max-content;
+    }
+}

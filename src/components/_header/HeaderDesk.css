@@ -1,0 +1,87 @@
+.HeaderDesk{
+    padding: 25px;
+    height: 100vh;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #0f0f0f;
+    color: #c5cae9;
+}
+.HeaderDesk ul{
+    list-style: none;
+}
+.intro nav{
+    margin-top: 50px;
+}
+.intro nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 10px;
+}
+.intro nav ul li{
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    max-width: 120px;
+    margin: 5px;
+    cursor: pointer;
+    transition:  all ease 200ms;
+    font-weight: 600;
+}
+.intro nav ul li:hover{
+    color: #fff;
+    font-size: 16pt;
+}
+.intro .active{
+    font-size: 16pt;
+    font-weight: 900;
+    border-bottom: 1px solid #363636;
+}
+.HeaderDesk .titles h1{ font-size: 28pt; }
+.HeaderDesk .titles h2{ font-size: 16pt; padding: 10px 0; }
+
+.HeaderDesk .link nav{
+    margin-bottom: 50px;
+}
+.HeaderDesk .link nav ul{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    max-width: 300px;
+    margin: 0 auto;
+}
+.HeaderDesk .link nav ul li{
+    margin: 5px; 
+    height: 35px; width: 35px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+     transition: all ease 300ms;
+}
+.HeaderDesk .link nav ul li:hover svg{
+    width: 30px;height:30px ;
+    color: #fff;
+}
+.HeaderDesk .link nav ul li svg{
+    width: 25px;
+    height: 25px;
+}
+
+@media screen and (min-width:1024px) {
+    .HeaderDesk{
+        max-width: 400px;
+        position: fixed;
+    }
+}
+
+@media screen and (max-width:1023px) {
+    .HeaderDesk{
+        max-width:100vw;
+        height: fit-content;
+    }
+    .HeaderDesk nav{
+        display: none;
+    }
+}

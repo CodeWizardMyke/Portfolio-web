@@ -1,0 +1,47 @@
+
+.allblack{
+    background: linear-gradient(
+        120deg,
+        #141414 0%,
+        #1c1c1c 50%,
+        #23232e 100%
+    );
+}
+.containerRepo{
+    max-width: 1440px;
+    margin: 0 auto;
+    color: #c5cae9 ;
+    position: relative;
+    min-height: 100vh;
+}
+.headRepo{
+    padding: 25px;
+    width: 1440px;
+    position: fixed;
+    background-color: #23232e;
+}
+.headRepo span{
+    font-size: 12pt;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+.headRepo span:hover{
+    color: #ffff;
+}
+
+.contentRepo{
+    padding: 95px 15px 15px 15px;
+}
+.contentRepo a{
+    text-decoration: none;
+    color: #23232e;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c5cae9; 
+    height: 25px;
+    border-radius: 5px;
+    font-weight: 600;
+}

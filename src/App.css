@@ -1,0 +1,20 @@
+section.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    position: relative;
+    margin:  0 auto;
+    background: linear-gradient(
+        120deg,
+        #141414 0%,
+        #1c1c1c 50%,
+        #23232e 100%
+    );
+      color: #c5cae9;
+      
+}
+
+article.content{
+    width: 100%;
+}
+
