@@ -1,0 +1,19 @@
+.footerStyle{
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    margin: 25px auto;
+    align-items: center;
+    justify-content: center;
+}
+.footerStyle ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    min-height: 75px;
+    padding: 15px 0px;
+    flex-wrap: wrap;
+}
+.footerStyle ul li{
+    padding: 5px 15px;
+}

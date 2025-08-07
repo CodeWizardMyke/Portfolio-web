@@ -105,13 +105,13 @@ article.content li{
 }
 
 @media screen and (min-width:1024px) {
-    article.content section{
+    article.content{
         padding-left: 415px;
     }
 }
 
 @media screen and (max-width:1023px) {
-    article.content section{
+    article.content{
         padding-left: 0;
     }
 }

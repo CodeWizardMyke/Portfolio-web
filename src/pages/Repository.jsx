@@ -33,20 +33,20 @@ function Repository() {
                         <thead>
                         <tr>
                             <th style={thStyle}>Nome</th>
-                            <th style={thStyle}>Descrição</th>
+                            <th className='desc' style={thStyle}>Descrição</th>
                             <th style={thStyle}>Link</th>
                         </tr>
                         </thead>
                         <tbody>
                         {repos.map((repo) => (
                             <tr key={repo.id}>
-                            <td style={tdStyle}>{repo.name}</td>
-                            <td style={tdStyle}>{repo.description || 'Sem descrição'}</td>
-                            <td style={tdStyle}>
-                                <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
-                                Ver no GitHub
-                                </a>
-                            </td>
+                                <td style={tdStyle}>{repo.name}</td>
+                                <td  className='desc'  style={tdStyle}>{repo.description || 'Sem descrição'}</td>
+                                <td style={tdStyle}>
+                                    <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
+                                    GitHub
+                                    </a>
+                                </td>
                             </tr>
                         ))}
                         </tbody>

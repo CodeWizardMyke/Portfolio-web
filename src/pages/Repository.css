@@ -45,3 +45,11 @@
     border-radius: 5px;
     font-weight: 600;
 }
+@media screen and (max-width:475px) {
+    .contentRepo{
+        padding: 45px 0px ;
+    }
+    .desc{
+        display: none;
+    }
+}

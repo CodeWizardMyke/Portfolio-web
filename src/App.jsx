@@ -8,6 +8,7 @@ import Experience from './components/sections/Experience.jsx';
 
 import "./App.css"
 import './components/sections/Section.css'
+
 import HeaderDesk from './components/_header/HeaderDesk.jsx';
 import FooterMain from './components/_footer/FooterMain.jsx';
 
@@ -20,7 +21,6 @@ function App() {
         <section className='main'>
           <HeaderDesk activeSection={activeSection} />
           <article className="content">
-
               <About/>
               <Projects/>
               <Experience/>
