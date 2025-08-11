@@ -1,7 +1,7 @@
 import React from 'react'
 import dataExp from "../../data/experience.json";
 import { TfiLayoutLineSolid } from "react-icons/tfi";
-import datacv from '../../data/doc.pdf'
+import datacv from '../../data/CurriculoIngles.pdf'
 
 function Experience() {
   return (
