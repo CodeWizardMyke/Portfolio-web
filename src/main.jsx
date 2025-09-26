@@ -8,6 +8,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from "./App";
 import Repository from "./pages/Repository";
+import Galery from "./pages/Galery";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path:"/repositorys",
     element:<Repository/>
+  },
+  {
+    path:"/galery",
+    element:<Galery/>
   }
 ])
 

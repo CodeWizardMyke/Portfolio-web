@@ -2,9 +2,18 @@
     {
         "start":"2025",
         "end":"Atual",
-        "title" : "Desenvolvedor Web & Mobile Full Stack",
-        "desc": " Desenvolvimento de website institucional em React para presença online da ALS Bordados. Criação de aplicativo mobile com React Native para gerenciamento de produção, controle de estoque e registro de funcionários. Backend desenvolvido em Express.js com banco de dados MySQL.",
-        "tech":["React.js","React Native","Express.js","MySQL"],
+        "title" : "Desenvolvedor Web ",
+        "desc": " Responsável pelo desenvolvimento do website institucional da ALS Bordados, utilizando React para consolidar sua presença digital. Paralelamente, atuo no desenvolvimento de aplicativo mobile em React Native, com foco em gestão de produção, controle de estoque e registro de funcionários. A infraestrutura de backend foi construída em Express.js, com persistência de dados em MySQL.",
+        "tech":["React js", "React Native","Node","MySQL"],
         "link":"https://www.alsbordados.com.br/"
+    },
+    {
+        "start":"2020",
+        "end":"Atual",
+        "title" : "UI/UX Design",
+        "desc": "Produção de design de landing pages para aplicações web e mobile com responsividade e características únicas.",
+        "tech":["Figma"],
+        "internal_link":true,
+        "link":"galery"
     }
 ]

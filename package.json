@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "framer-motion": "^12.23.18",
+    "lucide-react": "^0.544.0",
+    "pnpm": "^10.17.1",
     "react": "^19.1.0",
     "react-device-detect": "^2.2.3",
     "react-dom": "^19.1.0",
