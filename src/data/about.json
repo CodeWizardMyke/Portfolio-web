@@ -1,0 +1,10 @@
+[
+    {
+        "title": "Sobre mim",
+        "content": "Sou desenvolvedor web full stack com sólida experiência em JavaScript, React, Node.js, Express e SQL. Ao longo da minha jornada, desenvolvi aplicações completas, desde e-commerces com integração de pagamentos, como o projeto DH Books, até sistemas de gerenciamento personalizados com funcionalidades como carrinho de compras, controle de estoque, cadastro de produtos, e geração de relatórios em PDF/Excel."
+    },
+    {
+        "title": "Minhasa habilidades",
+        "content": "Tenho habilidade para construir interfaces intuitivas, com atenção à experiência do usuário e estrutura semântica. Domínio ferramentas como Axios para requisições HTTP, Multer para upload de imagens, além de práticas modernas como uso de hooks personalizados em React."
+    }
+]

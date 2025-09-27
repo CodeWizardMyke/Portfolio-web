@@ -9,7 +9,13 @@ export default function GaleryExpose() {
 const [selectedImage, setSelectedImage] = useState(null);
 
 return (
+  
   <div className="galery_content">
+    <div className="top_header">
+      <button
+        onClick={() => window.history.back()}
+      >Voltar</button>
+    </div>
     <div className="label_galery">
       <h2>Demonstração das principais interfaces criadas no Figma</h2>
     </div>
