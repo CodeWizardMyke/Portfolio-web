@@ -2,8 +2,10 @@ import { useState } from "react";
 
 import './GaleryExpose.css'
 import images from '../../data/figmaProjects.json'
-export default function GaleryExpose() {
 
+import PanZoom from "react-easy-panzoom";
+
+export default function GaleryExpose() {
 const [selectedImage, setSelectedImage] = useState(null);
 
 return (
@@ -22,14 +24,25 @@ return (
         ))
       }
     </div>
-      {
-        selectedImage && (
-          <div className="modal" onClick={() => setSelectedImage(null)}>
-            <span className="close">&times;</span>
-            <img className="modal-content" src={selectedImage} alt="Imagem ampliada" />
-          </div>
-        )
-      }
+    {selectedImage && (
+      <div className="modal" onClick={() => setSelectedImage(null)}>
+        <span className="close">&times;</span>
+        <PanZoom
+          minZoom={1}
+          maxZoom={4}
+          enablePan={true}
+          autoCenter
+          boundaryRatioVertical={0.8}
+          boundaryRatioHorizontal={0.8}
+        >
+          <img
+            className="modal-content"
+            src={selectedImage}
+            alt="Imagem ampliada"
+          />
+        </PanZoom>
+      </div>
+    )}
   </div>
 );
 }
