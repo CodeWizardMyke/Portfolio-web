@@ -1,55 +1,405 @@
-
-.allblack{
-    background: linear-gradient(
-        120deg,
-        #141414 0%,
-        #1c1c1c 50%,
-        #23232e 100%
-    );
-}
-.containerRepo{
-    max-width: 1440px;
-    margin: 0 auto;
-    color: #c5cae9 ;
-    position: relative;
+.repository-page {
     min-height: 100vh;
-}
-.headRepo{
-    padding: 25px;
-    width: 1440px;
-    position: fixed;
-    background-color: #23232e;
-}
-.headRepo span{
-    font-size: 12pt;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 200ms ease;
-}
-.headRepo span:hover{
-    color: #ffff;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(64, 88, 255, 0.08),
+            transparent 35%
+        ),
+        #08090c;
+
+    color: #ffffff;
+
+    padding: 70px 25px;
 }
 
-.contentRepo{
-    padding: 95px 15px 15px 15px;
-}
-.contentRepo a{
-    text-decoration: none;
-    color: #23232e;
+.repository-container {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #c5cae9; 
-    height: 25px;
-    border-radius: 5px;
-    font-weight: 600;
+    max-width: 1250px;
+
+    margin: 0 auto;
 }
-@media screen and (max-width:475px) {
-    .contentRepo{
-        padding: 45px 0px ;
+
+
+/* HEADER */
+
+.repository-header {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    margin-bottom: 45px;
+}
+
+.repository-back {
+    border: 0;
+
+    background: transparent;
+    color: #989ca6;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    padding: 0;
+    margin-bottom: 40px;
+
+    transition: 0.2s;
+}
+
+.repository-back:hover {
+    color: #ffffff;
+    transform: translateX(-3px);
+}
+
+.repository-title {
+    max-width: 680px;
+}
+
+.repository-eyebrow {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #7177ff;
+
+    text-transform: uppercase;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.repository-title h1 {
+    margin: 0;
+
+    font-size: clamp(36px, 5vw, 58px);
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+}
+
+.repository-title p {
+    margin: 20px 0 0;
+
+    max-width: 600px;
+
+    color: #989ca6;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.github-profile-link {
+    position: absolute;
+
+    right: 0;
+    bottom: 5px;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    border: 1px solid #292c33;
+
+    padding: 12px 18px;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+
+    background: rgba(255,255,255,0.025);
+
+    transition: 0.25s;
+}
+
+.github-profile-link:hover {
+    border-color: #5055ff;
+
+    background: rgba(80, 85, 255, 0.08);
+}
+
+
+/* COUNT */
+
+.repository-info {
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    color: #737782;
+
+    font-size: 13px;
+}
+
+.repository-info strong {
+    color: #fff;
+}
+
+
+/* GRID */
+
+.repository-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(340px, 1fr));
+
+    gap: 18px;
+}
+
+
+/* CARD */
+
+.repository-card {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 280px;
+
+    padding: 24px;
+
+    background: #101116;
+
+    border: 1px solid #202229;
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.25s,
+        border-color 0.25s,
+        background 0.25s;
+}
+
+.repository-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #383c48;
+
+    background: #121319;
+}
+
+
+/* CARD HEADER */
+
+.repository-card-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 28px;
+}
+
+.repository-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+
+    background: #17191f;
+
+    color: #7b80ff;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.repository-visibility {
+    padding: 5px 9px;
+
+    border: 1px solid #2b2e36;
+    border-radius: 50px;
+
+    color: #777b84;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.6px;
+}
+
+
+/* CONTENT */
+
+.repository-card-content {
+    flex: 1;
+}
+
+.repository-card-content h2 {
+    margin: 0 0 12px;
+
+    color: #f5f5f7;
+
+    font-size: 18px;
+
+    letter-spacing: -0.3px;
+}
+
+.repository-card-content p {
+    margin: 0;
+
+    color: #858994;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+}
+
+
+/* META */
+
+.repository-meta {
+    display: flex;
+
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    padding-top: 25px;
+
+    color: #747883;
+
+    font-size: 11px;
+}
+
+.repository-meta span {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+.language-dot {
+    display: block;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #656bff;
+}
+
+
+/* FOOTER */
+
+.repository-card-footer {
+    margin-top: 18px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #202229;
+}
+
+.repository-card-footer a {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    color: #b4b7c0;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    transition: 0.2s;
+}
+
+.repository-card-footer a:hover {
+    color: #ffffff;
+}
+
+.repository-card-footer a span {
+    font-size: 15px;
+
+    transition: 0.2s;
+}
+
+.repository-card-footer a:hover span {
+    transform: translate(2px, -2px);
+}
+
+
+/* STATUS */
+
+.repository-status {
+    padding: 50px;
+
+    border: 1px solid #202229;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    color: #858994;
+
+    background: #101116;
+}
+
+.repository-error {
+    color: #ff8181;
+}
+
+
+/* RESPONSIVO */
+
+@media screen and (max-width: 768px) {
+
+    .repository-page {
+        padding: 35px 18px;
     }
-    .desc{
-        display: none;
+
+    .repository-header {
+        margin-bottom: 30px;
     }
+
+    .github-profile-link {
+        position: static;
+
+        margin-top: 25px;
+    }
+
+    .repository-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .repository-card {
+        min-height: auto;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .repository-title h1 {
+        font-size: 36px;
+    }
+
+    .repository-title p {
+        font-size: 14px;
+    }
+
+    .repository-card {
+        padding: 20px;
+    }
+
 }

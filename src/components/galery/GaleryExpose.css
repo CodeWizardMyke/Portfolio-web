@@ -1,121 +1,476 @@
-.galery_content{
-    min-height: 80;
-    display: flex;
-    flex-direction: column;
-}
-.top_header{
-    height: 45px;
-    display: none;
-    align-items: center;
-    justify-content: end;
-    padding: 15px;
-}
-.top_header button{
-    border: none;
-    height: 30px;
-    width: 250px;
-    border-radius: 5px;
-    background-color: #f5f5f5;
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: #2c2b2bda;
-}
-.top_header button:hover{
-    cursor: pointer;
-    background-color: #2c2b2bda;
-    color: #f5f5f5;
-    transform: scale(1.1);
-    transition: all 0.3s ease-in-out;
+.galleryPage {
+    min-height: 100vh;
+
+    padding: 70px 30px 100px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(113, 119, 255, 0.07),
+            transparent 35%
+        ),
+        #090a0e;
+
+    color: #ffffff;
 }
 
-.project_images{
-    padding: 5px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
+.galleryContainer {
+    width: 100%;
+    max-width: 1300px;
 
-}
-.project_images img{
-    max-width: 250px;  /* limita largura */
-    max-height: 250px; /* limita altura */
-    width: auto;       /* deixa a largura se ajustar */
-    height: auto;      /* deixa a altura se ajustar */
-    border-radius: 5px;
     margin: 0 auto;
-    object-fit: contain; /* ou cover */
-}
-.label_galery{
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 25px;
 }
 
-.project_images img:hover{
+
+/* HEADER */
+
+.galleryHeader {
+    position: relative;
+
+    margin-bottom: 55px;
+}
+
+.galleryBack {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 45px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #7f838d;
+
+    font-size: 13px;
+
     cursor: pointer;
-    transform: scale(1.1);
-    transition: all 0.3s ease-in-out;
+
+    transition: 0.2s;
 }
-.modal{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    overflow: auto; /* permite arrastar quando der zoom */
-    align-items: center;
-    justify-content: center;
-    background-color: #25252591;
+
+.galleryBack svg {
+    transition: 0.2s;
 }
-.modal-content{ 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 100%;
-    height:auto ;
-    border-radius: 15px;
-    z-index: 150;
-    touch-action: manipulation;
+
+.galleryBack:hover {
+    color: #ffffff;
 }
-.close{
+
+.galleryBack:hover svg {
+    transform: translateX(-3px);
+}
+
+
+.galleryIntro {
+    max-width: 720px;
+}
+
+.galleryLabel {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #7177ff;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.galleryIntro h1 {
+    margin: 0;
+
+    max-width: 700px;
+
+    color: #f5f5f7;
+
+    font-size: clamp(38px, 5vw, 58px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+}
+
+.galleryIntro p {
+    max-width: 600px;
+
+    margin: 20px 0 0;
+
+    color: #858994;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+.galleryCount {
     position: absolute;
-    top: 10px;
-    right: 25px;
-    color: #2c2b2bda;
-    cursor: pointer;
-    font-size: 35px;
-    width: 40px;
+
+    right: 0;
+    bottom: 5px;
+
     display: flex;
+
+    align-items: baseline;
+
+    gap: 7px;
+
+    color: #676b75;
+}
+
+.galleryCount strong {
+    color: #ffffff;
+
+    font-size: 24px;
+}
+
+.galleryCount span {
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* GRID */
+
+.projectImages {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+/* CARD */
+
+.galleryCard {
+    overflow: hidden;
+
+    border: 1px solid #202229;
+
+    border-radius: 16px;
+
+    background: #101116;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s,
+        border-color 0.25s,
+        background 0.25s;
+}
+
+.galleryCard:hover {
+    transform: translateY(-5px);
+
+    border-color: #363a47;
+
+    background: #121319;
+}
+
+
+/* IMAGE */
+
+.galleryImage {
+    position: relative;
+
+    overflow: hidden;
+
+    aspect-ratio: 16 / 10;
+
+    background: #08090c;
+}
+
+.galleryImage img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: top;
+
+    transition: transform 0.45s;
+}
+
+.galleryCard:hover .galleryImage img {
+    transform: scale(1.025);
+}
+
+
+/* OVERLAY */
+
+.galleryOverlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
     align-items: center;
     justify-content: center;
-    height: 40px;
-    font-weight: bold;
+
+    gap: 8px;
+
+    opacity: 0;
+
+    background: rgba(5, 6, 9, 0.68);
+
+    backdrop-filter: blur(2px);
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    transition: 0.25s;
+}
+
+.galleryOverlay svg {
+    width: 16px;
+    height: 16px;
+}
+
+.galleryCard:hover .galleryOverlay {
+    opacity: 1;
+}
+
+
+/* CARD FOOTER */
+
+.galleryCardFooter {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 18px 20px;
+}
+
+.galleryCardFooter > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.galleryCardNumber {
+    color: #555963;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.galleryCardFooter h2 {
+    margin: 0;
+
+    color: #d7d9de;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.galleryCardFooter > svg {
+    color: #5e626c;
+
+    transition: 0.2s;
+}
+
+.galleryCard:hover .galleryCardFooter > svg {
+    color: #9fa3ff;
+
+    transform: scale(1.08);
+}
+
+
+/* MODAL */
+
+.galleryModal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: rgba(5, 6, 9, 0.96);
+
+    backdrop-filter: blur(12px);
+}
+
+.modalToolbar {
+    height: 70px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 28px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.modalToolbar span {
+    color: #71757f;
+
+    font-size: 11px;
+}
+
+.modalToolbar button {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid #292c33;
+
+    border-radius: 9px;
+
+    background: #111217;
+
+    color: #a3a6ad;
+
     cursor: pointer;
-    background-color: #f5f5f5;
-    border-radius: 50%;
-    z-index: 200;
-}
-.close:hover{
-    color :rgba(255, 0, 0, 0.781);
-    transform: scale(1.1);
+
+    font-size: 18px;
+
+    transition: 0.2s;
 }
 
-@media screen and (max-width: 2250px) {
-    .project_images {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
+.modalToolbar button:hover {
+    color: #ffffff;
+
+    border-color: #484c58;
+
+    background: #17181e;
 }
 
-@media screen and (max-width: 500px) {
-    .project_images img {
-        max-width: 300px;
-    }   
+
+/* VIEWER */
+
+.modalViewer {
+    flex: 1;
+
+    min-height: 0;
+
+    overflow: hidden;
 }
-@media screen and (max-width: 1024px) {
-    .top_header{
-        margin: 50px 0;
-        display: flex;
+
+.modalViewer > div {
+    width: 100%;
+    height: 100%;
+}
+
+.modalContent {
+    display: block;
+
+    max-width: 90vw;
+    max-height: 82vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 6px;
+
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.35);
+}
+
+
+/* TABLET */
+
+@media screen and (max-width: 900px) {
+
+    .galleryPage {
+        padding: 50px 22px 80px;
     }
+
+    .galleryCount {
+        position: static;
+
+        margin-top: 25px;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media screen and (max-width: 700px) {
+
+    .galleryPage {
+        padding: 35px 18px 60px;
+    }
+
+    .galleryBack {
+        margin-bottom: 35px;
+    }
+
+    .galleryIntro h1 {
+        font-size: 38px;
+
+        letter-spacing: -1px;
+    }
+
+    .galleryIntro p {
+        font-size: 14px;
+    }
+
+    .projectImages {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .galleryCardFooter {
+        padding: 16px;
+    }
+
+    .modalToolbar {
+        height: 58px;
+
+        padding: 0 15px;
+    }
+
+    .modalToolbar span {
+        display: none;
+    }
+
+    .modalToolbar {
+        justify-content: flex-end;
+    }
+
+    .modalContent {
+        max-width: 96vw;
+        max-height: 85vh;
+    }
+
 }

@@ -1,39 +1,74 @@
 import React from 'react'
 import { useNavigate } from 'react-router'
-import dataProjects  from "../../data/projetcs.json"
+import dataProjects from "../../data/projetcs.json"
+import { FiArrowUpRight } from "react-icons/fi";
 
 function Projects() {
-    const navigate = useNavigate()
+
+  const navigate = useNavigate()
 
   return (
-    <section id="projetos">
-        <ul>
-            <li>
-                {
-                    dataProjects.map((item,index) => (
-                        <div 
-                            className="p_content" 
-                            key={`item_project::${index}`}
-                            onClick={() => window.open(item.link, '_blank')}
-                        >
-                            <div className="p_thumbnail">
-                                <img src={item.thumbnail} alt={item['thumbnail-alt']} />
-                            </div>
-                            <div className="p_discribe">
-                                <h2>{item.titulo}</h2>
-                                <p>
-                                    {item.desc}
-                                </p>
-                            </div>
-                        </div>
-                    ))
-                }
-            </li>
-        </ul>
-        <div
-            onClick={()=> navigate('/repositorys')} 
-            className="p_complet"
-        ><span>Ver todos projetos.</span></div>
+    <section id="projetos" className="section-block">
+
+      <div className="section-header">
+        <span className="section-label">Projetos</span>
+
+        <h2>Projetos em destaque</h2>
+
+        <p>
+          Alguns dos principais projetos que desenvolvi,
+          combinando frontend, backend e experiência do usuário.
+        </p>
+      </div>
+
+      <div className="projects-grid">
+
+        {dataProjects.map((item, index) => (
+
+          <article
+            className="project-card"
+            key={`item_project::${index}`}
+            onClick={() => window.open(item.link, '_blank')}
+          >
+
+            <div className="project-thumbnail">
+
+              <img
+                src={item.thumbnail}
+                alt={item['thumbnail-alt']}
+              />
+
+              <div className="project-overlay">
+                <FiArrowUpRight />
+              </div>
+
+            </div>
+
+            <div className="project-content">
+
+              <div className="project-title">
+                <h3>{item.titulo}</h3>
+                <FiArrowUpRight />
+              </div>
+
+              <p>{item.desc}</p>
+
+            </div>
+
+          </article>
+
+        ))}
+
+      </div>
+
+      <button
+        className="section-link"
+        onClick={() => navigate('/repositorys')}
+      >
+        Ver todos os projetos
+        <FiArrowUpRight />
+      </button>
+
     </section>
   )
 }

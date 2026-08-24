@@ -1,10 +1,10 @@
 [
     {
         "title": "Sobre mim",
-        "content": "Sou desenvolvedor web full stack com sólida experiência em JavaScript, React, Node.js, Express e SQL. Ao longo da minha jornada, desenvolvi aplicações completas, desde e-commerces com integração de pagamentos, como o projeto DH Books, até sistemas de gerenciamento personalizados com funcionalidades como carrinho de compras, controle de estoque, cadastro de produtos, e geração de relatórios em PDF/Excel."
+        "content": "Sou desenvolvedor Full Stack e estudante de Ciência da Computação, focado na construção de aplicações web completas. Trabalho com JavaScript, React, Node.js, Express e bancos de dados SQL, desenvolvendo desde interfaces responsivas até APIs REST, autenticação, persistência de dados e integração entre frontend e backend. Busco transformar necessidades reais em soluções funcionais, organizadas e intuitivas."
     },
     {
-        "title": "Minhasa habilidades",
-        "content": "Tenho habilidade para construir interfaces intuitivas, com atenção à experiência do usuário e estrutura semântica. Domínio ferramentas como Axios para requisições HTTP, Multer para upload de imagens, além de práticas modernas como uso de hooks personalizados em React."
+        "title": "Minhas habilidades",
+        "content": "Desenvolvo interfaces responsivas e intuitivas com React, utilizando componentização, hooks personalizados e integração com APIs. No backend, trabalho com Node.js e Express na construção de APIs REST, autenticação, validação de dados, upload e gerenciamento de arquivos. Também possuo experiência com bancos de dados relacionais, ORMs, Git e publicação de aplicações em ambientes de produção."
     }
 ]

@@ -1,9 +1,17 @@
 [
     {
-        "thumbnail":"/images/alsProject.jpg",
-        "thumbnail-alt":"Imagem do projeto alsbordados feito por mim",
-        "titulo":"Site Institucional – ALS Bordados",
-        "desc":"Desenvolvi um site institucional responsivo para a ALS Bordados, com foco em desempenho, clareza visual e acessibilidade. A interface foi pensada para transmitir profissionalismo e praticidade, utilizando uma paleta de cores suaves e fontes legíveis em todos os dispositivos. A navegação é fluida, com seções bem definidas",
-        "link":"https://www.alsbordados.com.br"
+        "thumbnail": "/images/managerIO.png",
+        "thumbnail-alt": "Dashboard do sistema Manager.IO",
+        "titulo": "Manager.IO — Sistema de Gestão de Produtos",
+        "desc": "Aplicação Full Stack para gerenciamento de produtos e catálogos, com dashboard, autenticação, controle de estoque, categorias, marcas, precificação, especificações dinâmicas e gerenciamento de mídia. Desenvolvida com React, Node.js, Express, PostgreSQL e Sequelize.",
+        "link": "https://demoapp-one-opal.vercel.app/",
+        "featured": true
+    },
+    {
+        "thumbnail": "/images/alsProject.png",
+        "thumbnail-alt": "Página inicial do site institucional da ALS Bordados",
+        "titulo": "Site Institucional — ALS Bordados",
+        "desc": "Website institucional responsivo desenvolvido para fortalecer a presença digital da ALS Bordados. Construído em React, com foco em experiência do usuário, responsividade, clareza visual e apresentação dos serviços da empresa.",
+        "link": "https://www.alsbordados.com.br"
     }
 ]
